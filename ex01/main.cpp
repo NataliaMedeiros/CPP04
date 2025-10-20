@@ -3,6 +3,7 @@
 #include "Dog.hpp"
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
+#include "Brain.hpp"
 
 int main()
 {
@@ -72,6 +73,39 @@ int main()
 	std::cout << "**Delete WrongCat**" << std::endl;
 	delete wrongCat;
 	std::cout << std::endl;
+
+	// std::cout << "\n--------------------------------\n" << std::endl;
+
+	// Animal* animals[10];
+	// for (int i = 0; i < 10; ++i)
+	// {
+	// 	if (i < 5)
+	// 	{
+	// 		std::cout << i << " - ";
+	// 		animals[i] = new Dog();
+	// 	}
+	// 	else
+	// 	{
+	// 		std::cout << i << " - ";
+	// 		animals[i] = new Cat();
+	// 	}
+	// }
+
+	// for (int i = 0; i < 10; ++i)
+	// {
+	// 	std::cout << i << " - ";
+	// 	delete animals[i];
+	// }
+
+	std::cout << "\n=====  Deep Copy  =====" << std::endl;
+	Dog Dog1;
+	Dog1.setIdea("I am a Dog", 0);
+
+	Dog copiedDog(Dog1);
+		// copiedDog.setIdea("I want to play", 0);
+
+		// std::cout << "Original Dog's first idea: " << Dog1.getIdea(0) << std::endl;
+		// std::cout << "Copied Dog's first idea: " << copiedDog.getIdea(0) << std::endl;
 
 	return 0;
 }
