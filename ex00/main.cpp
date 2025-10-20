@@ -1,17 +1,77 @@
 #include "Animal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
+#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
 
 int main()
 {
+	std::cout << "**Create new Animal**" << std::endl;
 	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound(); //will output the cat sound!
-	j->makeSound();
+	std::cout << std::endl;
+
+	std::cout << "**Create new Dog**" << std::endl;
+	const Animal* dog = new Dog();
+	std::cout << std::endl;
+
+	std::cout << "**Create new Cat**" << std::endl;
+	const Animal* cat = new Cat();
+	std::cout << std::endl;
+
+	std::cout << "**Create WrongAnimal**" << std::endl;
+	const WrongAnimal* wrongAnimal = new WrongAnimal();
+	std::cout << std::endl;
+
+	std::cout << "**Create WrongCat**" << std::endl;
+	const WrongCat* wrongCat = new WrongCat();
+	std::cout << std::endl;
+
+	std::cout << "**Get Types**" << std::endl;
+	std::cout << dog->getType() << " " << std::endl;
+	std::cout << cat->getType() << " " << std::endl;
+	std::cout << wrongAnimal->getType() << " " << std::endl;
+	std::cout << wrongCat->getType() << " " << std::endl;
+	std::cout << std::endl;
+
+	std::cout << "**Cat makeSound**" << std::endl;
+	cat->makeSound(); //will output the cat sound!
+	std::cout << std::endl;
+
+	std::cout << "**Dog makeSound**" << std::endl;
+	dog->makeSound();
+	std::cout << std::endl;
+
+	std::cout << "**Animal makeSound**" << std::endl;
 	meta->makeSound();
-	...
+	std::cout << std::endl;
+
+	std::cout << "**WrongAnimal makeSound**" << std::endl;
+	wrongAnimal->makeSound();
+	std::cout << std::endl;
+
+	std::cout << "**WrongCat makeSound**" << std::endl;
+	wrongCat->makeSound();
+	std::cout << std::endl;
+
+	std::cout << "**Delete Animal**" << std::endl;
+	delete meta;
+	std::cout << std::endl;
+
+	std::cout << "**Delete Cat**" << std::endl;
+	delete cat;
+	std::cout << std::endl;
+
+	std::cout << "**Delete Dog**" << std::endl;
+	delete dog;
+	std::cout << std::endl;
+
+	std::cout << "**Delete WrongAnimal**" << std::endl;
+	delete wrongAnimal;
+	std::cout << std::endl;
+
+	std::cout << "**Delete WrongCat**" << std::endl;
+	delete wrongCat;
+	std::cout << std::endl;
+
 	return 0;
 }

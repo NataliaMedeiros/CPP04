@@ -8,8 +8,13 @@ class WrongAnimal
 	protected:
 		std::string type;
 	public:
-		WrongAnimal(/* args */);
+		WrongAnimal();
+		WrongAnimal(const WrongAnimal &other);
+		WrongAnimal& operator=(const WrongAnimal &other);
 		~WrongAnimal();
+
+		void makeSound() const;
+		std::string getType(void) const;
 };
 
 #endif

@@ -11,9 +11,17 @@ class Animal
 		Animal();
 		Animal(const Animal &other);
 		Animal& operator=(const Animal &other);
-		~Animal();
+		virtual ~Animal();
 
-		void makeSound();
+		virtual void makeSound() const;
+		std::string getType(void) const;
 };
 
 #endif
+
+/*
+Making the destructor virtual make sure that if I delete this object
+through a base pointer, make sure you also call the derived destructor first.
+
+The keyword const after the function means:
+This member function does not modify the object’s internal state.*/

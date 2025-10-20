@@ -3,7 +3,7 @@
 
 #include "Animal.hpp"
 
-class Dog : Animal
+class Dog : public Animal
 {
 	public:
 		Dog();
@@ -11,7 +11,7 @@ class Dog : Animal
 		Dog& operator=(const Dog &other);
 		~Dog();
 
-		void makeSound();
+		void makeSound() const override;
 };
 
 #endif
