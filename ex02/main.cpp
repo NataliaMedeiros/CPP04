@@ -7,10 +7,6 @@
 
 int main()
 {
-	std::cout << "**Create new Animal**" << std::endl;
-	const Animal* meta = new Animal();
-	std::cout << std::endl;
-
 	std::cout << "**Create new Dog**" << std::endl;
 	const Animal* dog = new Dog();
 	std::cout << std::endl;
@@ -42,20 +38,12 @@ int main()
 	dog->makeSound();
 	std::cout << std::endl;
 
-	std::cout << "**Animal makeSound**" << std::endl;
-	meta->makeSound();
-	std::cout << std::endl;
-
 	std::cout << "**WrongAnimal makeSound**" << std::endl;
 	wrongAnimal->makeSound();
 	std::cout << std::endl;
 
 	std::cout << "**WrongCat makeSound**" << std::endl;
 	wrongCat->makeSound();
-	std::cout << std::endl;
-
-	std::cout << "**Delete Animal**" << std::endl;
-	delete meta;
 	std::cout << std::endl;
 
 	std::cout << "**Delete Cat**" << std::endl;
@@ -107,16 +95,16 @@ int main()
 	// std::cout << "Original Dog's first idea: '" << Dog1.getIdea(0) << "'" << std::endl;
 	// std::cout << "Copied Dog's first idea: '" << copiedDog.getIdea(0) << "'" << std::endl;
 
-	std::cout << "\n-----Assignment Operator------" << std::endl;
-	Cat cat1;
-	cat1.setIdea("I am hungry!", 1);
+	// std::cout << "\n-----Assignment Operator------" << std::endl;
+	// Cat cat1;
+	// cat1.setIdea("I am hungry!", 1);
 
-	Cat cat2;
-	cat2 = cat1;
-	cat2.setIdea("I want milk!", 1);
+	// Cat cat2;
+	// cat2 = cat1;
+	// cat2.setIdea("I want milk!", 1);
 
-	std::cout << "Cat1's second idea: " << cat1.getIdea(1) << std::endl;
-	std::cout << "Cat2's second idea: " << cat2.getIdea(1) << std::endl;
+	// std::cout << "Cat1's second idea: " << cat1.getIdea(1) << std::endl;
+	// std::cout << "Cat2's second idea: " << cat2.getIdea(1) << std::endl;
 
 	return 0;
 }

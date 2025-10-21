@@ -1,4 +1,4 @@
-NAME = brain
+NAME = abstract
 
 SRC = Animal.cpp Cat.cpp Dog.cpp main.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
 

@@ -13,11 +13,19 @@ class Animal
 		Animal& operator=(const Animal &other);
 		virtual ~Animal();
 
-		virtual void makeSound() const;
+		virtual void makeSound() const = 0; //pure virtual
 		std::string getType(void) const;
 };
 
 #endif
+
+/* Abstract Class
+	An abstract class in C++ is a class that cannot be instantiated directly.
+	To make a class abstract, you declare at least one pure virtual function.
+	For example: virtual void makeSound() const = 0;
+	This function has no default implementation in this class — derived classes must override it.
+*/
+
 
 /*
 Making the destructor virtual make sure that if I delete this object
