@@ -2,22 +2,23 @@
 
 WrongCat::WrongCat()
 {
-	std::cout << "WrongCat is created" << std::endl;
 	this->type = "WrongCat";
+	std::cout << "WrongCat is created" << std::endl;
 }
 
 WrongCat::WrongCat(const WrongCat &other)
 {
+	this->type = other.type;
 	std::cout << "WrongCat copy is created" << std::endl;
 }
 
 WrongCat& WrongCat::operator=(const WrongCat &other)
 {
-	std::cout << "WrongAnimel operator assignment is created" << std::endl;
 	if (this != &other)
 	{
 		WrongCat::operator=(other);
 	}
+	std::cout << "WrongAnimel operator assignment is created" << std::endl;
 	return (*this);
 }
 

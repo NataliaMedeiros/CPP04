@@ -1,25 +1,20 @@
 #include "WrongAnimal.hpp"
 
-WrongAnimal::WrongAnimal()
+WrongAnimal::WrongAnimal() : type("WrongAnimal")
 {
 	std::cout << "WrongAnimal is created" << std::endl;
-	this->type = "WrongAnimal";
-
 }
 
-WrongAnimal::WrongAnimal(const WrongAnimal &other)
+WrongAnimal::WrongAnimal(const WrongAnimal &other) : type(other.type)
 {
 	std::cout << "WrongAnimal copy is created" << std::endl;
-	this->type = other.type;
 }
 
 WrongAnimal& WrongAnimal::operator=(const WrongAnimal &other)
 {
-	std::cout << "WrongAnimel operator assignment is created" << std::endl;
 	if (this != &other)
-	{
 		this->type = other.type;
-	}
+	std::cout << "WrongAnimel operator assignment is created" << std::endl;
 	return (*this);
 }
 

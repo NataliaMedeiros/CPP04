@@ -2,34 +2,30 @@
 
 Cat::Cat()
 {
-	std::cout << "Cat constructor called" << std::endl;
 	this->type = "Cat";
 	this->brain = new Brain;
+	std::cout << "Cat constructor called" << std::endl;
 }
 
 Cat::Cat(const Cat &other)
 {
-	std::cout << "Cat copy constructor called" << std::endl;
 	this->type = other.type;
 	this->brain = new Brain(*other.brain);
+	std::cout << "Cat copy constructor called" << std::endl;
 }
 
 Cat& Cat::operator=(const Cat &other)
 {
-	std::cout << "Cat operator constructor called" << std::endl;
 	if (this != &other)
-	{
-		//TODO all operators
-		Animal::operator=(source);
-		this->type = other.type;
-	}
+		Animal::operator=(other);
+	std::cout << "Cat operator constructor called" << std::endl;
 	return (*this);
 }
 
 Cat::~Cat()
 {
-	std::cout << "Cat destructor called" << std::endl;
 	delete this->brain;
+	std::cout << "Cat destructor called" << std::endl;
 }
 
 void Cat::makeSound() const
