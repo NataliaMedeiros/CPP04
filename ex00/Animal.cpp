@@ -1,23 +1,20 @@
 #include "Animal.hpp"
 
-Animal::Animal()
+Animal::Animal() : type("Animal")
 {
 	std::cout << "Animal constructor called" << std::endl;
 }
 
-Animal::Animal(const Animal &other)
+Animal::Animal(const Animal &other) : type(other.type)
 {
 	std::cout << "Animal copy constructor called" << std::endl;
-	this->type = other.type;
 }
 
 Animal& Animal::operator=(const Animal &other)
 {
-	std::cout << "Animal operator constructor called" << std::endl;
 	if (this != &other)
-	{
 		this->type = other.type;
-	}
+	std::cout << "Animal operator constructor called" << std::endl;
 	return (*this);
 }
 
