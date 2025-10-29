@@ -64,7 +64,7 @@ std::string const &Character::getName() const
 
 void Character::equip(AMateria* m)
 {
-	if (!m)
+	if (m)
 	{
 		int index = 0;
 		while (index < 4 && inventory[index])

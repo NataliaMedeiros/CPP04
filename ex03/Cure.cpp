@@ -1,18 +1,17 @@
 #include "Cure.hpp"
 
-Cure::Cure()
+Cure::Cure() : AMateria("cure")
 {
 	std::cout << "Cure: Default constructor called" << std::endl;
 }
 
-Cure::Cure(std::string const &type)
+Cure::Cure(std::string const &type) :type(type)
 {
 	std::cout << "Cure: Parameterized constructor called" << std::endl;
 }
 
-Cure::Cure(const Cure &copy)
+Cure::Cure(const Cure &copy) : AMateria(copy)
 {
-	*this = copy;
 	std::cout << "Cure: Copy constructor called" << std::endl;
 }
 
@@ -33,4 +32,9 @@ Cure* Cure::clone() const
 {
 	std::cout << "Cure: Clone function called" << std::endl;
 	return new Cure(*this);
+}
+
+void Cure::use(ICharacter& target)
+{
+	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
 }
